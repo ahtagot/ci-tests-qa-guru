@@ -5,7 +5,6 @@ on: workflow_dispatch
 jobs:
   test:
     # где заускаем
-    permissions: read-all
     runs-on: ubuntu-latest
     # что делаем
     steps:
