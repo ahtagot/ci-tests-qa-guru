@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Mar 26 00:17:20 GMT 2024","Tue Mar 26 00:17:24 GMT 2024","3598","","tests.allure.LambdaIssuesTest","","tests.allure.LambdaIssuesTest","lambdaGithubIssuesTest","lambdaGithubIssuesTest()",""
+"passed","Tue Mar 26 00:17:15 GMT 2024","Tue Mar 26 00:17:20 GMT 2024","4806","","tests.allure.IssuesAnnotationsTest","","tests.allure.IssuesAnnotationsTest","annotationsGithubIssuesTest","Check issues #1 in projectahtagot/ci-tests-qa-guru",""
+"passed","Tue Mar 26 00:17:24 GMT 2024","Tue Mar 26 00:17:27 GMT 2024","3574","","tests.allure.ListenerIssuesTest","","tests.allure.ListenerIssuesTest","githubIssuesListenerTest","githubIssuesListenerTest()",""
