@@ -6,28 +6,29 @@ import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static org.openqa.selenium.By.linkText;
-import static tests.allure.PageUrl.*;
+
 
 public class Steps {
+
     @Step ("Open Github home page")
-    public void openMainPage(String githubHomepage){
-        open(GITHUB_HOMEPAGE);
+    public void openMainPage(){
+        open("/");
     }
-    @Step ("Search" + REPOSITORY)
-    public void searchRepository(String repository){
+    @Step ("Search {repo}")
+    public void searchRepository(String repo){
         $(".search-input").click();
-        $("#query-builder-test").setValue(REPOSITORY).submit();
+        $("#query-builder-test").setValue(repo).submit();
     }
-    @Step ("Click repository " + REPOSITORY + "link")
-    public void clickRepository(String repository){
-        $(linkText(REPOSITORY)).click();
+    @Step ("Click repository {repo}]")
+    public void clickRepository(String repo){
+        $(linkText(repo)).click();
     }
     @Step ("Open Issues Tab")
     public void openIssuesTab(){
         $("#issues-tab").click();
     }
-    @Step("Check Issue #" + ISSUE)
+    @Step("Check Issue {issue}")
     public void checkIssue(int issue){
-        $(withText("#" + ISSUE)).should(Condition.exist);
+        $(withText("#" + issue )).should(Condition.exist);
     }
 }

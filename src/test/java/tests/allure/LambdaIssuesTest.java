@@ -10,19 +10,19 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 import static org.openqa.selenium.By.linkText;
-import static tests.allure.PageUrl.GITHUB_HOMEPAGE;
-import static tests.allure.PageUrl.REPOSITORY;
-import static tests.allure.PageUrl.ISSUE;
+
 
 
 
 public class LambdaIssuesTest extends BaseTest {
-
+    private static final String REPOSITORY = "ahtagot/ci-tests-qa-guru";
+    private static final int ISSUE =1;
     @Test
     public void lambdaGithubIssuesTest() {
 
+
         SelenideLogger.addListener("allure", new AllureSelenide());
-        step("Open Github home page", () -> open(GITHUB_HOMEPAGE));
+        step("Open Github home page", () -> open("/"));
         step("Search" + REPOSITORY, () -> {
             $(".search-input").click();
             $("#query-builder-test").setValue(REPOSITORY).submit()

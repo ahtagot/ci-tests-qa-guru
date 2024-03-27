@@ -10,6 +10,7 @@ public class BaseTest {
     static void beforeAll() {
         Configuration.browserSize = "1280x800";
         Configuration.pageLoadStrategy = "eager";
+        Configuration.baseUrl = "https://github.com";
     }
 
     @AfterAll

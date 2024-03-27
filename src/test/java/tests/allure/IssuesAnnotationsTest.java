@@ -7,13 +7,11 @@ import io.qameta.allure.Story;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import static tests.allure.PageUrl.GITHUB_HOMEPAGE;
-import static tests.allure.PageUrl.REPOSITORY;
-import static tests.allure.PageUrl.ISSUE;
 
 
 public class IssuesAnnotationsTest extends BaseTest{
-
+    private static final String REPOSITORY = "ahtagot/ci-tests-qa-guru";
+    private static final int ISSUE =1;
     @Test
     @DisplayName("Check issues #" + ISSUE + " in project" + REPOSITORY)
     @Feature("Issue in user repository.")
@@ -22,7 +20,7 @@ public class IssuesAnnotationsTest extends BaseTest{
     public void annotationsGithubIssuesTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
     Steps steps = new Steps();
-    steps.openMainPage(GITHUB_HOMEPAGE);
+    steps.openMainPage();
     steps.searchRepository(REPOSITORY);
     steps.clickRepository(REPOSITORY);
     steps.openIssuesTab();
